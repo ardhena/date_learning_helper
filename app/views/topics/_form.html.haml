@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :description
+    = f.input :name, label: 'Nazwa grupy'
+    = f.input :description, label: 'Opis'
   .form-actions
     - if current_page?(controller: 'topics', action: 'new')
-      = f.button :submit, class: "btn btn-success"
+      = f.submit 'Zapisz', class: "btn btn-success spacious"
     -else
-      = f.button :submit, class: "btn btn-warning"
+      = f.submit 'Zapisz', class: "btn btn-warning spacious"

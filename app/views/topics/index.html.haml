@@ -1,11 +1,11 @@
-%h1 Grupy dat
+%h1 Grupy wydarzeń
+
+= link_to 'Nowa grupa wydarzeń', new_topic_path, class: "btn btn-success spacious"
 
 %table.table.table-hover
   %thead
     %tr
-      %th Nazwa
-      %th
-      %th
+      %th Nazwa grupy
       %th
 
   %tbody
@@ -13,10 +13,6 @@
       %tr
         %td= topic.name
         %td
-          %span= link_to 'Show', topic, class: "btn btn-primary"
-          %span= link_to 'Edit', edit_topic_path(topic), class: "btn btn-warning"
-          %span= link_to 'Destroy', topic, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
-
-%br
-
-= link_to 'New Topic', new_topic_path, class: "btn btn-success"
+          %span= link_to 'Pokaż', topic, class: "btn btn-primary"
+          %span= link_to 'Edytuj', edit_topic_path(topic), class: "btn btn-warning"
+          %span= link_to 'Usuń', topic, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
