@@ -24,6 +24,7 @@ class TopicsController < ApplicationController
   end
 
   def update
+    topic = Topic.find(params[:id])
     if topic.update(topic_params)
       redirect_to topic, notice: 'Grupa została pomyślnie zaktualizowana.'
     else
