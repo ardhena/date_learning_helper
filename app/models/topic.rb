@@ -3,4 +3,6 @@ class Topic < ActiveRecord::Base
   # t.text :description
   # t.timestamps
 
+  has_many :events
+
 end

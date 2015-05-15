@@ -6,4 +6,6 @@ class Event < ActiveRecord::Base
   # t.integer :topic_id
   # t.timestamps
 
+  belongs_to :topic
+
 end
