@@ -4,6 +4,7 @@ class Topic < ActiveRecord::Base
   # t.timestamps
 
   has_many :events
+  belongs_to :user
 
   validates :name, presence: true, uniqueness: true, length:  { minimum: 3 }
 
