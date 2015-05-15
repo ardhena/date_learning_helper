@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'visitors#index'
+
+  devise_scope :user do
+    authenticated :user do
+      root 'visitors#index'
+    end
+    unauthenticated do
+      root 'devise/sessions#new', as: 'unauthenticated_root'
+    end
+  end
+
 end
