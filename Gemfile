@@ -32,7 +32,7 @@ end
 
 group :development, :test do
   gem 'factory_girl_rails'
-  gem 'faker'
+  gem 'ffaker'
   gem 'rspec-rails'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
