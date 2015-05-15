@@ -6,3 +6,21 @@
 
 = link_to 'Edit', edit_topic_path(topic), class: "btn btn-warning"
 = link_to 'Back', topics_path, class: "btn btn-default"
+= link_to 'New Event', '#', class: "btn btn-success"
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Początek
+      %th Koniec
+      %th Zdarzenie
+  %tbody
+    - topic.events.each do |event|
+      %tr
+        %td= event.start_date
+        %td= event.end_date
+        %td= event.name
+        %td
+          %span= link_to 'Show', '#', class: "btn btn-primary"
+          %span= link_to 'Edit', '#', class: "btn btn-warning"
+          %span= link_to 'Destroy', '#', :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
