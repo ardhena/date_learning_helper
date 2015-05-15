@@ -5,7 +5,7 @@ describe TopicsController do
   let(:valid_session) { {} }
 
   context 'user is logged in' do
-    let(:user) { build(:user) }
+    let(:user) { create(:user) }
 
     before do
       sign_in user
@@ -15,16 +15,35 @@ describe TopicsController do
     end
 
     describe 'GET index' do
-    end
-    describe 'GET new' do
-    end
-    describe 'GET edit' do
+      let(:user_topic) { Topic.create(name: 'foo', user_id: user.id) }
+      let(:not_user_topic) { Topic.create(name: 'bar') }
+
+      it 'lists all topics of current user' do
+        get :index, {}, valid_session
+        expect(controller.topics).to eq(user.topics)
+      end
     end
     describe 'POST create' do
+      context 'topic is valid' do
+        it 'saves new topic'
+        it 'redirects to new topic page'
+      end
+      context 'topic is invalid' do
+        it 're-renders new action'
+      end
     end
     describe 'PUT update' do
+      context 'topic is valid' do
+        it 'updates topic'
+        it 'redirects to topic page'
+      end
+      context 'topic is invalid' do
+        it 're-renders edit action'
+      end
     end
     describe 'DELETE destroy' do
+      it 'destroys topic'
+      it 'redirects to topics page'
     end
   end
 
