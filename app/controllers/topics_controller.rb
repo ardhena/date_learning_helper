@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
   before_action :authenticate_user!
 
   expose_decorated(:topic)
-  expose_decorated(:topics)
+  expose_decorated(:topics) { current_user.topics }
 
   def index
   end

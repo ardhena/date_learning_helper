@@ -5,4 +5,5 @@ RSpec.describe Topic, type: :model do
   it { should validate_uniqueness_of(:name) }
   it { should validate_length_of(:name).is_at_least(3) }
   it { should have_many :events }
+  it { should belong_to :user }
 end
