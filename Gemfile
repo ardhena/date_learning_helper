@@ -16,6 +16,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'devise'
 
 
 group :development do
