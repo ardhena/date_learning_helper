@@ -2,8 +2,8 @@ class TopicsController < ApplicationController
 
   before_action :authenticate_user!
 
-  expose(:topic)
-  expose(:topics)
+  expose_decorated(:topic)
+  expose_decorated(:topics)
 
   def index
   end
