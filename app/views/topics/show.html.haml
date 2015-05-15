@@ -1,0 +1,8 @@
+%h1
+  Grupa dat:
+  = topic.name
+
+%h3= topic.description
+
+= link_to 'Edit', edit_topic_path(topic), class: "btn btn-warning"
+= link_to 'Back', topics_path, class: "btn btn-default"
