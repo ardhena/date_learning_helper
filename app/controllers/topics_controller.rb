@@ -16,6 +16,7 @@ class TopicsController < ApplicationController
 
   def create
     self.topic = Topic.new(topic_params)
+    topic.user_id = current_user.id
     if topic.save
       redirect_to topic, notice: 'Grupa została pomyślnie utworzona.'
     else
