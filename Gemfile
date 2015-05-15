@@ -17,7 +17,9 @@ gem 'simple_form'
 gem 'unicorn'
 gem 'unicorn-rails'
 gem 'devise'
-
+gem "draper"
+gem "decent_exposure"
+gem "decent_decoration"
 
 group :development do
   gem 'better_errors'
