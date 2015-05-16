@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :topics
+  resources :topics do
+    resources :events
+  end
 
 end
