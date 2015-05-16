@@ -20,20 +20,11 @@ bootbox.dialog
           <td>' + "<%= j event.details %>" + '</td>
         </tr>
       </tbody>
-    </table>'
+    </table>' +
+    '<span class="button">' + "<%= j link_to 'Nowe wydarzenie', new_topic_event_path(topic), remote: true, class: "btn btn-success new-event" %>" + '</span>' +
+    '<span class="button">' + "<%= j link_to 'Edytuj', edit_topic_event_path(topic, event), remote: true, class: "btn btn-warning edit-event" %>" + '</span>' +
+    '<span class="button">' + "<%= j link_to 'Usuń', topic_event_path(topic, event), :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true, class: "btn btn-danger delete-event" %>" + '</span>'
   buttons:
-    success:
-      label: 'Nowe wydarzenie'
-      className: 'btn-success new-event'
-      callback: ->
-    warning:
-      label: 'Edytuj'
-      className: 'btn-warning edit-event'
-      callback: ->
-    danger:
-      label: 'Usuń'
-      className: 'btn-danger delete-event'
-      callback: ->
     default:
       label: 'Zamknij'
       className: 'btn-default'

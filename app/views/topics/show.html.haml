@@ -21,6 +21,6 @@
         %td= event.end_date
         %td= event.name
         %td
-          %span= link_to 'Pokaż', topic_event_path(topic, event), remote: true, class: "btn btn-primary show-event", id: "#{event.id}"
-          %span= link_to 'Edytuj', edit_topic_event_path(topic, event), remote: true, class: "btn btn-warning edit-event", id: "#{event.id}"
-          %span= link_to 'Usuń', topic_event_path(topic, event), :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true, class: "btn btn-danger delete-event", id: "#{event.id}"
+          %span= link_to 'Pokaż', topic_event_path(topic, event), remote: true, class: "btn btn-primary show-event"
+          %span= link_to 'Edytuj', edit_topic_event_path(topic, event), remote: true, class: "btn btn-warning edit-event"
+          %span= link_to 'Usuń', topic_event_path(topic, event), :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true, class: "btn btn-danger delete-event"
