@@ -1,4 +1,4 @@
-= simple_form_for [topic, event] do |f|
+= simple_form_for [topic, event], remote: true do |f|
   = f.error_notification
   .form-inputs
     = f.input :name, label: 'Wydarzenie'
@@ -6,4 +6,7 @@
     = f.input :end_date, label: 'Koniec', as: :string, hint: 'Formaty: 01.01.2015 lub 2015-01-01'
     = f.input :details, label: 'Szczegóły'
   .form-actions
-    = f.submit 'Zapisz', remote: true, class: "btn btn-warning spacious"
+    - if current_page?(controller: 'events', action: 'new')
+      = f.submit 'Zapisz', class: "btn btn-success spacious"
+    - else
+      = f.submit 'Zapisz', class: "btn btn-warning spacious"

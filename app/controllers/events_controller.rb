@@ -4,22 +4,26 @@ class EventsController < ApplicationController
 
   expose_decorated(:event)
   expose_decorated(:topic)
+  expose_decorated(:events) { topic.events }
 
   def show
     respond_to do |format|
+      format.html
       format.js
-      format.json { render json: event, status: :ok, location: event }
+      format.json { render json: event }
     end
   end
 
   def new
     respond_to do |format|
+      format.html
       format.js
     end
   end
 
   def edit
     respond_to do |format|
+      format.html
       format.js
       format.json { render json: event }
     end
@@ -31,11 +35,11 @@ class EventsController < ApplicationController
     respond_to do |format|
       if event.save
         format.html { redirect_to topic_path(topic), notice: 'Wydarzenie zostało dodane.' }
-        format.json { render json: event, status: :created, location: event }
+        format.js
+        format.json { render json: events }
       else
-        # needs fixing
-        format.js { render 'new' }
-        format.json { render json: event, status: :error, location: event }
+        format.js { render action: 'new' }
+        format.json { render json: event }
       end
     end
   end
@@ -45,18 +49,22 @@ class EventsController < ApplicationController
     respond_to do |format|
       if event.update(event_params)
         format.html { redirect_to topic_path(topic), notice: 'Wydarzenie zostało zaktualizowane.' }
-        format.json { render json: event, status: :updated, location: event }
+        format.js
+        format.json { render json: events }
       else
-        # needs fixing
-        format.js { render 'edit' }
-        format.json { render json: event, status: :error, location: event }
+        format.js { render action: 'edit' }
+        format.json { render json: event }
       end
     end
   end
 
   def destroy
     event.destroy
-    redirect_to topic_path(topic), notice: 'Wydarzenie zostało usunięte.'
+    respond_to do |format|
+      format.html { redirect_to topic_path(topic), notice: 'Wydarzenie zostało usunięte.' }
+      format.js
+      format.json { render json: events }
+    end
   end
 
   def event_params
