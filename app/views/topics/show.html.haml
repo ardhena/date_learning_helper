@@ -6,7 +6,7 @@
 
 = link_to 'Edytuj', edit_topic_path(topic), class: "btn btn-warning spacious"
 = link_to 'Cofnij', topics_path, class: "btn btn-default spacious"
-= link_to 'Nowe wydarzenie', '#', class: "btn btn-success spacious"
+= link_to 'Nowe wydarzenie', '#', class: "btn btn-success spacious new-event"
 
 %table.table.table-hover
   %thead
@@ -21,6 +21,6 @@
         %td= event.end_date
         %td= event.name
         %td
-          %span= link_to 'Pokaż', '#', class: "btn btn-primary"
-          %span= link_to 'Edytuj', '#', class: "btn btn-warning"
-          %span= link_to 'Usuń', '#', :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
+          %span= link_to 'Pokaż', '#', class: "btn btn-primary show-event", id: "#{event.id}"
+          %span= link_to 'Edytuj', '#', class: "btn btn-warning edit-event"
+          %span= link_to 'Usuń', '#', :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger delete-event"
