@@ -1,0 +1,17 @@
+connection: &connection
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *connection
+  database: date_learning_helper_development
+
+test: &test
+  <<: *connection
+  database: date_learning_helper_test
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
