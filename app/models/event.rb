@@ -12,4 +12,6 @@ class Event < ActiveRecord::Base
   validates :start_date, presence: true
   validates :end_date, presence: true
 
+  default_scope { order("start_date asc, end_date asc") }
+
 end
