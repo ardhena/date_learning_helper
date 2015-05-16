@@ -1,3 +1,7 @@
+$('.bootbox.modal.fade.in').fadeOut().remove()
+$('.modal-backdrop.fade.in').remove()
+$('body').removeClass("modal-open").removeProp("style")
+
 bootbox.dialog
   title: 'Edycja'
   message:
