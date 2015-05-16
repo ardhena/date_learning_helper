@@ -7,6 +7,7 @@ class EventsController < ApplicationController
 
   def show
     respond_to do |format|
+      format.js
       format.json { render json: event, status: :ok, location: event }
     end
   end
@@ -22,7 +23,7 @@ class EventsController < ApplicationController
     event.topic_id = topic.id
     respond_to do |format|
       if event.save
-        format.js
+        format.html { redirect_to topic_path(topic), notice: 'Wydarzenie zostało dodane' }
         format.json { render json: event, status: :created, location: event }
       else
         format.js { render 'new' }
