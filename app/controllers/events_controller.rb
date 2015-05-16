@@ -54,6 +54,11 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    event.destroy
+    redirect_to topic_path(topic), notice: 'Wydarzenie zostało usunięte.'
+  end
+
   def event_params
     params.require(:event).permit(:start_date, :end_date, :name, :details)
   end

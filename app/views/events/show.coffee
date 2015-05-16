@@ -23,7 +23,7 @@ bootbox.dialog
     </table>' +
     '<span class="button">' + "<%= j link_to 'Nowe wydarzenie', new_topic_event_path(topic), remote: true, class: "btn btn-success new-event" %>" + '</span>' +
     '<span class="button">' + "<%= j link_to 'Edytuj', edit_topic_event_path(topic, event), remote: true, class: "btn btn-warning edit-event" %>" + '</span>' +
-    '<span class="button">' + "<%= j link_to 'Usuń', topic_event_path(topic, event), :method => :delete, :data => { :confirm => 'Are you sure?' }, remote: true, class: "btn btn-danger delete-event" %>" + '</span>'
+    '<span class="button">' + "<%= j link_to 'Usuń', topic_event_path(topic, event), :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger delete-event" %>" + '</span>'
   buttons:
     default:
       label: 'Zamknij'
