@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :events
   end
 
+  get 'learning', to: 'learning#index', as: 'learning_all'
   get 'learning/:id', to: 'learning#show', as: :learning
 
 end

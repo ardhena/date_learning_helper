@@ -1,0 +1,12 @@
+%h1 Ucz się
+
+%table.table.table-hover
+  %thead
+    %tr
+      %th Grupa wydarzeń
+      %th
+  %tbody
+    - topics.each do |topic|
+      %tr
+        %td= topic.name
+        %td= link_to 'Pokaż oś czasu', learning_path(topic), class: "btn btn-success"
