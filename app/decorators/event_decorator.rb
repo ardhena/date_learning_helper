@@ -22,4 +22,12 @@ class EventDecorator < Draper::Decorator
     end
   end
 
+  def start_date_timeline
+    object.start_date.to_formatted_s(:timeline)
+  end
+
+  def end_date_timeline
+    object.end_date.to_formatted_s(:timeline)
+  end
+
 end
