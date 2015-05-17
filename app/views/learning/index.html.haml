@@ -9,4 +9,6 @@
     - topics.each do |topic|
       %tr
         %td= topic.name
-        %td= link_to 'Pokaż oś czasu', learning_path(topic), class: "btn btn-success"
+        %td
+          %span= link_to 'Pokaż oś czasu', learning_path(topic), class: "btn btn-info"
+          %span= link_to 'Pokaż', topic, class: "btn btn-primary"
