@@ -8,4 +8,6 @@ class Topic < ActiveRecord::Base
 
   validates :name, presence: true, uniqueness: true, length:  { minimum: 3 }
 
+  default_scope { order("name asc") }
+
 end
