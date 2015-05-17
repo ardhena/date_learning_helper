@@ -11,11 +11,15 @@ class EventDecorator < Draper::Decorator
   #   end
 
   def start_date
-    object.start_date.strftime("%d.%m.%Y")
+    if object.start_date.respond_to?(:to_formatted_s)
+      object.start_date.to_formatted_s(:normal)
+    end
   end
 
   def end_date
-    object.end_date.strftime("%d.%m.%Y")
+    if object.start_date.respond_to?(:to_formatted_s)
+      object.start_date.to_formatted_s(:normal)
+    end
   end
 
 end
