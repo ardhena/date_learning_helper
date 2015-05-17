@@ -5,8 +5,8 @@ $('body').removeClass("modal-open").removeProp("style")
 if '<%= j topic.events.index(topic.events.find(event.id)).to_s %>' is '0'
   $('tbody').prepend('
     <tr id="'+"<%= j event.id.to_s %>"+'">
-      <td>'+"<%= j event.start_date.to_formatted_s %>"+'</td>
-      <td>'+"<%= j event.end_date.to_formatted_s %>"+'</td>
+      <td>'+"<%= j event.start_date %>"+'</td>
+      <td>'+"<%= j event.end_date %>"+'</td>
       <td>'+"<%= j event.name %>"+'</td>
       <td>
         <span><%= j link_to 'Pokaż', topic_event_path(topic, event), remote: true, class: "btn btn-primary show-event" %></span>
@@ -18,8 +18,8 @@ if '<%= j topic.events.index(topic.events.find(event.id)).to_s %>' is '0'
 else
   $('tr#<%= j topic.events[topic.events.index(topic.events.find(event.id))-1].id.to_s %>').after('
     <tr id="'+"<%= j event.id.to_s %>"+'">
-      <td>'+"<%= j event.start_date.to_formatted_s %>"+'</td>
-      <td>'+"<%= j event.end_date.to_formatted_s %>"+'</td>
+      <td>'+"<%= j event.start_date %>"+'</td>
+      <td>'+"<%= j event.end_date %>"+'</td>
       <td>'+"<%= j event.name %>"+'</td>
       <td>
         <span><%= j link_to 'Pokaż', topic_event_path(topic, event), remote: true, class: "btn btn-primary show-event" %></span>
@@ -40,11 +40,11 @@ bootbox.dialog
         </tr>
         <tr>
           <th>Początek</th>
-          <td>' + "<%= j event.start_date.to_formatted_s %>" + '</td>
+          <td>' + "<%= j event.start_date %>" + '</td>
         </tr>
         <tr>
           <th>Koniec</th>
-          <td>' + "<%= j event.end_date.to_formatted_s %>" + '</td>
+          <td>' + "<%= j event.end_date %>" + '</td>
         </tr>
         <tr>
           <th>Szczegóły</th>

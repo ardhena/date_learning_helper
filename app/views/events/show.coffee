@@ -13,11 +13,11 @@ bootbox.dialog
         </tr>
         <tr>
           <th>Początek</th>
-          <td>' + "<%= j event.start_date.to_formatted_s %>" + '</td>
+          <td>' + "<%= j event.start_date %>" + '</td>
         </tr>
         <tr>
           <th>Koniec</th>
-          <td>' + "<%= j event.end_date.to_formatted_s %>" + '</td>
+          <td>' + "<%= j event.end_date %>" + '</td>
         </tr>
         <tr>
           <th>Szczegóły</th>

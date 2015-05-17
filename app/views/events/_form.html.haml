@@ -2,8 +2,8 @@
   = f.error_notification
   .form-inputs
     = f.input :name, label: 'Wydarzenie'
-    = f.input :start_date, label: 'Początek', as: :string, hint: 'Formaty: 01.01.2015 lub 2015-01-01'
-    = f.input :end_date, label: 'Koniec', as: :string, hint: 'Formaty: 01.01.2015 lub 2015-01-01'
+    = f.input :start_date, label: 'Początek', as: :string, hint: 'Formaty: 01.01.2015'
+    = f.input :end_date, label: 'Koniec', as: :string, hint: 'Formaty: 01.01.2015'
     = f.input :details, label: 'Szczegóły'
   .form-actions
     - if current_page?(controller: 'events', action: 'new')
