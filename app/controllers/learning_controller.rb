@@ -1,0 +1,2 @@
+class LearningController < ApplicationController
+end
