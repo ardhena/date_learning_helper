@@ -23,6 +23,10 @@ bootbox.dialog
           <th>Szczegóły</th>
           <td>' + "<%= j event.details %>" + '</td>
         </tr>
+        <tr>
+          <th>Media</th>
+          <td>' + "<a href=\"<%= j event.media %>\" target=\"_blank\">" + "<%= j event.media %>" + "</a>" + '</td>
+        </tr>
       </tbody>
     </table>' +
     '<span class="button">' + "<%= j link_to 'Nowe wydarzenie', new_topic_event_path(topic), remote: true, class: "btn btn-success new-event" %>" + '</span>' +

@@ -1,5 +1,8 @@
 %h1= topic.name
 %h3= topic.description
+%h3
+  %span= link_to 'Grupy wydarzeń', topics_path, class: 'btn btn-default'
+  %span= link_to 'Pokaż grupę wydarzeń', topic_path(topic), class: 'btn btn-primary'
 
 .timeline{ id: topic.id }
   #timeline

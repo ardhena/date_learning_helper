@@ -5,6 +5,7 @@
     = f.input :start_date, label: 'Początek', as: :string, hint: 'Format: 01.01.2015'
     = f.input :end_date, label: 'Koniec', as: :string, hint: 'Format: 01.01.2015'
     = f.input :details, label: 'Szczegóły'
+    = f.input :media, label: 'Media', hint: 'Podaj link (tylko jeden!) do: obrazu, filmu na YT, artykułu na Wikipedii lub strony internetowej.'
   .form-actions
     - if current_page?(controller: 'events', action: 'new')
       = f.submit 'Zapisz', class: "btn btn-success spacious"
