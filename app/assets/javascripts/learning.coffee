@@ -12,3 +12,4 @@ $(document).on 'ready page:load', ->
     source: '/learning/'+topicId+'.json'
     embed_id: 'timeline'
     debug: true
+    lang: 'pl'

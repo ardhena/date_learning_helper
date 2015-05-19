@@ -5,4 +5,5 @@
 #= require_tree .
 #= require_self
 #= require bootbox
-#=require timelineJS/embed
+#= require timelineJS/embed
+#=require timelineJS/locale/pl
