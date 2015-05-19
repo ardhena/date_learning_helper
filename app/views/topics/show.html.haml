@@ -7,6 +7,7 @@
 = link_to 'Edytuj', edit_topic_path(topic), class: "btn btn-warning spacious"
 = link_to 'Usuń', topic, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
 = link_to 'Pokaż oś czasu', learning_path(topic), class: "btn btn-info"
+= link_to "Zrób test", test_path(topic), class: "btn btn-test"
 = link_to 'Cofnij', topics_path, class: "btn btn-default spacious"
 = link_to 'Nowe wydarzenie', new_topic_event_path(topic), remote: true, class: "btn btn-success spacious new-event"
 

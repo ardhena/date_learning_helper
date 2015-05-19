@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get 'learning', to: 'learning#index', as: 'learning_all'
   get 'learning/:id', to: 'learning#show', as: :learning
 
+  get 'tests', to: 'tests#index', as: :tests
+  get 'tests/:id', to: 'tests#show', as: :test
+
 end

@@ -1,8 +1,11 @@
-%h1= topic.name
+%h1
+  Oś czasu:
+  = topic.name
 %h3= topic.description
 %h3
-  %span= link_to 'Grupy wydarzeń', topics_path, class: 'btn btn-default'
   %span= link_to 'Pokaż grupę wydarzeń', topic_path(topic), class: 'btn btn-primary'
+  %span= link_to 'Zrób test', test_path(topic), class: "btn btn-test"
+  %span= link_to 'Cofnij', learning_path, class: 'btn btn-default'
 
 .timeline{ id: topic.id }
   #timeline

@@ -17,3 +17,4 @@
           %span= link_to 'Edytuj', edit_topic_path(topic), class: "btn btn-warning"
           %span= link_to 'Usuń', topic, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn btn-danger"
           %span= link_to 'Pokaż oś czasu', learning_path(topic), class: "btn btn-info"
+          %span= link_to 'Zrób test', test_path(topic), class: "btn btn-test"
