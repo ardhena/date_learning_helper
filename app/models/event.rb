@@ -3,6 +3,7 @@ class Event < ActiveRecord::Base
   # t.date :end_date
   # t.string :name
   # t.text :details
+  # t.string :media
   # t.integer :topic_id
   # t.timestamps
 
