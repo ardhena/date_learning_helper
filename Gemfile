@@ -22,6 +22,7 @@ gem 'devise'
 gem "draper"
 gem "decent_exposure"
 gem "decent_decoration"
+gem 'kaminari'
 
 group :development do
   gem 'better_errors'
