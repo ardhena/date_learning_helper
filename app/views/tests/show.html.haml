@@ -1,8 +1,13 @@
 %h1
   Test:
   = topic.name
-%h3= topic.description
 %h3
   %span= link_to 'Pokaż grupę wydarzeń', topic_path(topic), class: 'btn btn-primary'
   %span= link_to 'Ucz się', learning_path(topic), class: "btn btn-info"
   %span= link_to 'Cofnij', tests_path, class: 'btn btn-default'
+
+%br
+- @events.each do |event|
+  %h4= event.name
+
+= paginate @events

@@ -9,5 +9,8 @@ class TestsController < ApplicationController
   end
 
   def show
+    params[:seed] ||= Random.new_seed
+    srand params[:seed].to_i
+    @events = Kaminari.paginate_array(topic.events.shuffle).page(params[:page]).per(1)
   end
 end
