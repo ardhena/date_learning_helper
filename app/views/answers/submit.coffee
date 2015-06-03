@@ -36,3 +36,5 @@ $('.panel-body')
         </tbody>
       </table>
     ')
+
+$('.next').removeClass('hidden')
