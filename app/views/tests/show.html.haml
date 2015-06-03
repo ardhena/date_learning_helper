@@ -6,8 +6,20 @@
   %span= link_to 'Ucz się', learning_path(topic), class: "btn btn-info"
   %span= link_to 'Cofnij', tests_path, class: 'btn btn-default'
 
-%br
 - @events.each do |event|
-  %h4= event.name
+  .question.row
+    .col-md-6
+      .panel.panel-info.event
+        .panel-heading
+          %h3= event.name
+        .panel-body
+          = simple_form_for :answer, url: answer_path, remote: true do |f|
+            .form-inputs
+              .row
+                = f.input :start_date, label: 'Początek', as: :string, hint: 'Format: 01.01.2015', required: false, wrapper_html: { class: 'col-md-6' }
+                = f.input :end_date, label: 'Koniec', as: :string, hint: 'Format: 01.01.2015. Zostaw puste by zaznaczyć wydarzenie jednodniowe.', required: false, wrapper_html: { class: 'col-md-6' }
+                = f.input :question, as: :hidden, input_html: { value: event }
+            .form-actions
+              = f.submit 'Sprawdź odpowiedź', class: "btn btn-success"
 
-= paginate @events
+= link_to_next_page @events, 'Następne pytanie', class: 'btn btn-warning'
