@@ -6,20 +6,27 @@
   %span= link_to 'Ucz się', learning_path(topic), class: "btn btn-info"
   %span= link_to 'Cofnij', tests_path, class: 'btn btn-default'
 
+.question-progress
+  .progress
+    .progress-bar.progress-bar-info{ style: "width: #{@percent}%;" }
+      ="#{@percent.to_i}%"
+    .progress-bar.progress-bar-warning.progress-bar-striped.active{ style: "width: #{1.0/@events.total_pages * 100}%;" }
+      ="Pytanie #{@events.current_page} z #{@events.total_pages}"
+
+
 - @events.each do |event|
-  .question.row
-    .col-md-6
-      .panel.panel-info.event
-        .panel-heading
-          %h3= event.name
-        .panel-body
-          = simple_form_for :answer, url: answer_path, remote: true do |f|
-            .form-inputs
-              .row
-                = f.input :start_date, label: 'Początek', as: :string, hint: 'Format: 01.01.2015.', required: false, wrapper_html: { class: 'col-md-6' }
-                = f.input :end_date, label: 'Koniec', as: :string, hint: 'Format: 01.01.2015. Puste pole: wydarzenie jednodniowe.', required: false, wrapper_html: { class: 'col-md-6' }
-                = f.input :question, as: :hidden, input_html: { value: event.id }
-            .form-actions
-              = f.submit 'Sprawdź odpowiedź', class: "btn btn-success"
+  .question
+    .panel.panel-info.event
+      .panel-heading
+        %h3= event.name
+      .panel-body
+        = simple_form_for :answer, url: answer_path, remote: true do |f|
+          .form-inputs
+            .row
+              = f.input :start_date, label: 'Początek', as: :string, hint: 'Format: 01.01.2015.', required: false, wrapper_html: { class: 'col-md-6' }
+              = f.input :end_date, label: 'Koniec', as: :string, hint: 'Format: 01.01.2015. Puste pole: wydarzenie jednodniowe.', required: false, wrapper_html: { class: 'col-md-6' }
+              = f.input :question, as: :hidden, input_html: { value: event.id }
+          .form-actions
+            = f.submit 'Sprawdź odpowiedź', class: "btn btn-success"
 
 .next.hidden= link_to_next_page @events, 'Następne pytanie', class: 'btn btn-warning', params: { seed: params[:seed] }

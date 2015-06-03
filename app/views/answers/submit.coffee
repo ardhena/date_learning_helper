@@ -1,12 +1,16 @@
 $('.panel.panel-info.event').removeClass('panel-info')
 $('.panel-heading').empty()
+$('.next').removeClass('hidden')
+$('.progress-bar.progress-bar-warning.progress-bar-striped.active').removeClass('active').removeClass('progress-bar-warning')
 
 if "<%= j @answer_response %>" is 'correct'
   $('.panel.event').addClass('panel-success')
   $('.panel-heading').append('<b>Podałeś poprawną odpowiedź!</b>')
+  $('.progress-bar.progress-bar-striped').addClass('progress-bar-success')
 else
   $('.panel.event').addClass('panel-danger')
   $('.panel-heading').append('<b>Podałeś złą odpowiedź!</b>')
+  $('.progress-bar.progress-bar-striped').addClass('progress-bar-danger')
 
 $('.panel-body')
   .empty()
@@ -36,5 +40,3 @@ $('.panel-body')
         </tbody>
       </table>
     ')
-
-$('.next').removeClass('hidden')

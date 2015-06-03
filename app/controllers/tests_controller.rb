@@ -12,5 +12,6 @@ class TestsController < ApplicationController
     params[:seed] ||= Random.new_seed
     srand params[:seed].to_i
     @events = Kaminari.paginate_array(topic.events.shuffle).page(params[:page]).per(1)
+    @percent = ((@events.current_page - 1).to_f / @events.total_pages * 100)
   end
 end
