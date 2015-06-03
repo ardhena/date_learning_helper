@@ -22,4 +22,4 @@
             .form-actions
               = f.submit 'Sprawdź odpowiedź', class: "btn btn-success"
 
-= link_to_next_page @events, 'Następne pytanie', class: 'btn btn-warning'
+= link_to_next_page @events, 'Następne pytanie', class: 'btn btn-warning', params: { seed: params[:seed] }
