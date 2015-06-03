@@ -18,7 +18,7 @@
               .row
                 = f.input :start_date, label: 'Początek', as: :string, hint: 'Format: 01.01.2015', required: false, wrapper_html: { class: 'col-md-6' }
                 = f.input :end_date, label: 'Koniec', as: :string, hint: 'Format: 01.01.2015. Zostaw puste by zaznaczyć wydarzenie jednodniowe.', required: false, wrapper_html: { class: 'col-md-6' }
-                = f.input :question, as: :hidden, input_html: { value: event }
+                = f.input :question, as: :hidden, input_html: { value: event.id }
             .form-actions
               = f.submit 'Sprawdź odpowiedź', class: "btn btn-success"
 
