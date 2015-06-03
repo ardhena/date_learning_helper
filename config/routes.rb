@@ -19,5 +19,5 @@ Rails.application.routes.draw do
 
   get 'tests', to: 'tests#index', as: :tests
   get 'tests/:id', to: 'tests#show', as: :test
-
+  post 'tests/:id/submit', to: 'answers#submit', as: :answer
 end
