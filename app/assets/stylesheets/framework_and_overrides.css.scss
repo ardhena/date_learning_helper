@@ -54,7 +54,7 @@ span.button {
   margin: 5px;
 }
 
-.btn-test{
+.btn.btn-test {
   @extend .btn-info;
   background-color: #6700BF;
   border-color: #45007F;

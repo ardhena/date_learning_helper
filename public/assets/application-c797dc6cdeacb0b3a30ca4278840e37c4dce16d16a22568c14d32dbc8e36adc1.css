@@ -4549,28 +4549,28 @@ select[multiple].input-lg,
 }
 
 /* line 71, /home/olga/.rvm/gems/ruby-2.1.5@date_learning_helper/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-info {
+.btn-info, .btn.btn-test, .btn-test.submit {
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
 }
 /* line 11, /home/olga/.rvm/gems/ruby-2.1.5@date_learning_helper/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+.btn-info:hover, .btn.btn-test:hover, .btn-test.submit:hover, .btn-info:focus, .btn.btn-test:focus, .btn-test.submit:focus, .btn-info.focus, .focus.btn.btn-test, .focus.btn-test.submit, .btn-info:active, .btn.btn-test:active, .btn-test.submit:active, .btn-info.active, .active.btn.btn-test, .active.btn-test.submit, .open > .btn-info.dropdown-toggle, .open > .dropdown-toggle.btn.btn-test, .open > .dropdown-toggle.btn-test.submit {
   color: #fff;
   background-color: #31b0d5;
   border-color: #269abc;
 }
 /* line 21, /home/olga/.rvm/gems/ruby-2.1.5@date_learning_helper/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
+.btn-info:active, .btn.btn-test:active, .btn-test.submit:active, .btn-info.active, .active.btn.btn-test, .active.btn-test.submit, .open > .btn-info.dropdown-toggle, .open > .dropdown-toggle.btn.btn-test, .open > .dropdown-toggle.btn-test.submit {
   background-image: none;
 }
 /* line 29, /home/olga/.rvm/gems/ruby-2.1.5@date_learning_helper/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-info.disabled, .btn-info.disabled:hover, .btn-info.disabled:focus, .btn-info.disabled.focus, .btn-info.disabled:active, .btn-info.disabled.active, .btn-info[disabled], .btn-info[disabled]:hover, .btn-info[disabled]:focus, .btn-info[disabled].focus, .btn-info[disabled]:active, .btn-info[disabled].active, fieldset[disabled] .btn-info, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn-info.active {
+.btn-info.disabled, .disabled.btn.btn-test, .disabled.btn-test.submit, .btn-info.disabled:hover, .disabled.btn.btn-test:hover, .disabled.btn-test.submit:hover, .btn-info.disabled:focus, .disabled.btn.btn-test:focus, .disabled.btn-test.submit:focus, .btn-info.disabled.focus, .disabled.focus.btn.btn-test, .disabled.focus.btn-test.submit, .btn-info.disabled:active, .disabled.btn.btn-test:active, .disabled.btn-test.submit:active, .btn-info.disabled.active, .disabled.active.btn.btn-test, .disabled.active.btn-test.submit, .btn-info[disabled], [disabled].btn.btn-test, [disabled].btn-test.submit, .btn-info[disabled]:hover, [disabled].btn.btn-test:hover, [disabled].btn-test.submit:hover, .btn-info[disabled]:focus, [disabled].btn.btn-test:focus, [disabled].btn-test.submit:focus, .btn-info[disabled].focus, [disabled].focus.btn.btn-test, [disabled].focus.btn-test.submit, .btn-info[disabled]:active, [disabled].btn.btn-test:active, [disabled].btn-test.submit:active, .btn-info[disabled].active, [disabled].active.btn.btn-test, [disabled].active.btn-test.submit, fieldset[disabled] .btn-info, fieldset[disabled] .btn.btn-test, fieldset[disabled] .btn-test.submit, fieldset[disabled] .btn-info:hover, fieldset[disabled] .btn.btn-test:hover, fieldset[disabled] .btn-test.submit:hover, fieldset[disabled] .btn-info:focus, fieldset[disabled] .btn.btn-test:focus, fieldset[disabled] .btn-test.submit:focus, fieldset[disabled] .btn-info.focus, fieldset[disabled] .focus.btn.btn-test, fieldset[disabled] .focus.btn-test.submit, fieldset[disabled] .btn-info:active, fieldset[disabled] .btn.btn-test:active, fieldset[disabled] .btn-test.submit:active, fieldset[disabled] .btn-info.active, fieldset[disabled] .active.btn.btn-test, fieldset[disabled] .active.btn-test.submit {
   background-color: #5bc0de;
   border-color: #46b8da;
 }
 /* line 40, /home/olga/.rvm/gems/ruby-2.1.5@date_learning_helper/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-info .badge {
+.btn-info .badge, .btn.btn-test .badge, .btn-test.submit .badge {
   color: #5bc0de;
   background-color: #fff;
 }
@@ -8645,6 +8645,32 @@ section {
 /* line 53, /home/olga/Projects/date_learning_helper/app/assets/stylesheets/framework_and_overrides.css.scss */
 span.button {
   margin: 5px;
+}
+
+/* line 57, /home/olga/Projects/date_learning_helper/app/assets/stylesheets/framework_and_overrides.css.scss */
+.btn.btn-test, .btn-test.submit {
+  background-color: #6700BF;
+  border-color: #45007F;
+}
+/* line 61, /home/olga/Projects/date_learning_helper/app/assets/stylesheets/framework_and_overrides.css.scss */
+.btn.btn-test:hover, .btn-test.submit:hover {
+  background-color: #45007F;
+  border-color: #220040;
+}
+/* line 5, /home/olga/Projects/date_learning_helper/app/assets/stylesheets/tests.scss */
+.event {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* line 10, /home/olga/Projects/date_learning_helper/app/assets/stylesheets/tests.scss */
+.hidden {
+  display: none;
+}
+
+/* line 14, /home/olga/Projects/date_learning_helper/app/assets/stylesheets/tests.scss */
+.question-progress {
+  margin-top: 30px;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
