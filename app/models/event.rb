@@ -9,7 +9,7 @@ class Event < ActiveRecord::Base
 
   belongs_to :topic
 
-  validates :name, presence: true, uniqueness: true, length: { minimum: 3, maximum: 255 }
+  validates :name, presence: true, length: { minimum: 3, maximum: 255 }
   validates :start_date, presence: true
   validates :end_date, presence: true
 
