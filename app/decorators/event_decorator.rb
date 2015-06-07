@@ -30,4 +30,8 @@ class EventDecorator < Draper::Decorator
     object.end_date.to_formatted_s(:timeline)
   end
 
+  def details
+    object.details.gsub(/\n/, '<br/>').html_safe
+  end
+
 end
