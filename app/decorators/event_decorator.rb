@@ -31,7 +31,7 @@ class EventDecorator < Draper::Decorator
   end
 
   def details
-    object.details.gsub(/\n/, '<br/>').html_safe
+    object.details.to_s.gsub(/\n/, '<br/>').html_safe
   end
 
 end
